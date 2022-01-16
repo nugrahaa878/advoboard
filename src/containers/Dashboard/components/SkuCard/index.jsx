@@ -4,7 +4,6 @@ import styles from './styles.module.css';
 
 import more from '../../../../assets/icons/more.png';
 import ProductCard from '../ProductCard';
-import { dummyBestSelling } from '../../data/item';
 
 const SkuCard = ({
   title,

@@ -2,8 +2,6 @@ import React from 'react';
 
 import styles from './styles.module.css';
 
-import frisian from '../../../../assets/images/frisian-flag.jpg';
-
 const ProductCard = ({
   image,
   name,
