@@ -7,6 +7,10 @@ import Sidebar from './components/Sidebar';
 import Calendar from './components/Calendar';
 import InsightBar from './components/InsightBar';
 import TurnOverCard from './components/TurnOverCard';
+import SkuCard from './components/SkuCard';
+
+const bestSellingSkuTitle = 'BEST SELLING SKU';
+const topCompetitorSkuTitle = 'TOP COMPETITOR SKU';
 
 const Dashboard = () => {
   return (
@@ -25,8 +29,14 @@ const Dashboard = () => {
 
           <TurnOverCard />
 
-          <div>
-            <p>average purchase value</p>
+          <div className={styles.chart}>
+            <p>APV</p>
+            <SkuCard 
+              title={bestSellingSkuTitle}
+            />
+            <SkuCard 
+              title={topCompetitorSkuTitle}
+            />
           </div>
         </div>
       </div>

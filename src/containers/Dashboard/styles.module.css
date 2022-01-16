@@ -34,3 +34,9 @@
   opacity: 1;
   font-size: 40px;
 }
+
+.chart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
