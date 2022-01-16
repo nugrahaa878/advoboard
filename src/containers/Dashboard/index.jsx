@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 import Navbar from '../../components/Navbar';
 import Sidebar from './components/Sidebar';
 import Calendar from './components/Calendar';
+import InsightBar from './components/InsightBar';
 
 const Dashboard = () => {
   return (
@@ -19,9 +20,7 @@ const Dashboard = () => {
             <Calendar />
           </div>
 
-          <div>
-            <p>Market Insight</p>
-          </div>
+          <InsightBar />
 
           <div>
             <p>Sales Turnover</p>
