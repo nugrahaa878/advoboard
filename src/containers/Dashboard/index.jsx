@@ -12,8 +12,23 @@ const Dashboard = () => {
       
       <div className={styles.content}>
         <Sidebar />
-        <div>
-          
+        <div className={styles.salesContainer}>
+          <div className={styles.header}>
+            <h1>Dashboard</h1>
+            <p>Period</p>
+          </div>
+
+          <div>
+            <p>Market Insight</p>
+          </div>
+
+          <div>
+            <p>Sales Turnover</p>
+          </div>
+
+          <div>
+            <p>average purchase value</p>
+          </div>
         </div>
       </div>
     </div>
