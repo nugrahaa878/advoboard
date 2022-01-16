@@ -4,15 +4,20 @@ import styles from './styles.module.css';
 
 import frisian from '../../../../assets/images/frisian-flag.jpg';
 
-const ProductCard = () => {
+const ProductCard = ({
+  image,
+  name,
+  price,
+  sold,
+}) => {
   return (
     <div className={styles.container}>
-      <img className={styles.image} src={frisian} alt=''/>
+      <img className={styles.image} src={image} alt=''/>
       <div className={styles.info}>
-        <h3>Frisian Flag</h3>
+        <h3>{name}</h3>
         <div className={styles.sales}>
-          <p>Rp 10.000</p>
-          <p>12</p>
+          <p>Rp {price}</p>
+          <p>{sold}</p>
         </div>
       </div>
     </div>

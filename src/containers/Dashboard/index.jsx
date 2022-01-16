@@ -8,6 +8,7 @@ import Calendar from './components/Calendar';
 import InsightBar from './components/InsightBar';
 import TurnOverCard from './components/TurnOverCard';
 import SkuCard from './components/SkuCard';
+import { dummyBestSelling } from './data/item';
 
 const bestSellingSkuTitle = 'BEST SELLING SKU';
 const topCompetitorSkuTitle = 'TOP COMPETITOR SKU';
@@ -33,9 +34,11 @@ const Dashboard = () => {
             <p>APV</p>
             <SkuCard 
               title={bestSellingSkuTitle}
+              products={dummyBestSelling}
             />
             <SkuCard 
               title={topCompetitorSkuTitle}
+              products={dummyBestSelling}
             />
           </div>
         </div>
