@@ -1,11 +1,21 @@
 import React from 'react';
+
+import styles from './styles.module.css';
+
 import Navbar from '../../components/Navbar';
+import Sidebar from './components/Sidebar';
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Navbar />
-      <p>Dashboard</p>
+      
+      <div className={styles.content}>
+        <Sidebar />
+        <div>
+          
+        </div>
+      </div>
     </div>
   );
 };
