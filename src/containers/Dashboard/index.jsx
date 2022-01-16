@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 
 import Navbar from '../../components/Navbar';
 import Sidebar from './components/Sidebar';
+import Calendar from './components/Calendar';
 
 const Dashboard = () => {
   return (
@@ -15,7 +16,7 @@ const Dashboard = () => {
         <div className={styles.salesContainer}>
           <div className={styles.header}>
             <h1>Dashboard</h1>
-            <p>Period</p>
+            <Calendar />
           </div>
 
           <div>
