@@ -10,9 +10,9 @@ const InsightBar = () => {
     <div className={styles.container}>
       <h3>MARKET INSIGHT</h3>
       <div className={styles.helpContainer}>
-        <img className={styles.helpIcon} src={help}/>
+        <img className={styles.helpIcon} src={help} alt='' />
         <p>Click Here for Help</p>
-        <img className={styles.arrowUp} src={arrow}/>
+        <img className={styles.arrowUp} src={arrow} alt='' />
       </div>
     </div>
   );

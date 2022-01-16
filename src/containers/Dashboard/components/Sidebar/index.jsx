@@ -8,8 +8,8 @@ import sales from '../../../../assets/icons/sales.png';
 const Sidebar = () => {
   return (
     <div className={styles.container}>
-      <img src={hamburger} />
-      <img src={sales} />
+      <img src={hamburger} alt='' />
+      <img src={sales}  alt='' />
     </div>
   );
 };
