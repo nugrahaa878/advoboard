@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar';
 import Sidebar from './components/Sidebar';
 import Calendar from './components/Calendar';
 import InsightBar from './components/InsightBar';
+import TurnOverCard from './components/TurnOverCard';
 
 const Dashboard = () => {
   return (
@@ -22,9 +23,7 @@ const Dashboard = () => {
 
           <InsightBar />
 
-          <div>
-            <p>Sales Turnover</p>
-          </div>
+          <TurnOverCard />
 
           <div>
             <p>average purchase value</p>

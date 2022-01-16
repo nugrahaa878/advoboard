@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border: 0.5px solid #CDCDCD;
+  border-radius: 2px;
+  width: fit-content;
+  position: relative;
+  padding: 12px 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  box-shadow: 0px 2px 6px #0000000A;
+}
+
+.moreIcon {
+  object-fit: contain;
+  width: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dataContainer {
+  display: flex;
+}
+
+.dataContainer img {
+  width: 48.54px;
+}
+
+.dataContainer h3 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: #4D4F5C;
+}
+
+.dataContainer p {
+  font-size: 14px;
+}
+
+.title {
+  color: #707070C4;
+  margin-bottom: 8px;
+}
+
+.sales {
+  object-fit: contain;
+  width: 48.54px;
+  margin-left: 10px;
+}
