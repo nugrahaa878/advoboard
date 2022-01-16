@@ -11,7 +11,7 @@ const SkuCard = ({
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{title}</h3>
-      <img className={styles.more} src={more}/>
+      <img className={styles.more} src={more} alt=''/>
       <ProductCard />
     </div>
   );
