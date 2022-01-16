@@ -9,13 +9,13 @@ const TurnOverCard = () => {
   return (
     <div className={styles.container}>
       <p className={styles.title}>Sales Turnover</p>
-      <img className={styles.moreIcon} src={more}/>
+      <img className={styles.moreIcon} src={more} alt='' />
       <div className={styles.dataContainer}>
         <div>
           <h3>Rp 3,600,000</h3>
           <p>13.8% last period in products sold</p>
         </div>
-        <img className={styles.sales} src={sales}/>
+        <img className={styles.sales} src={sales} alt='' />
       </div>
     </div>
   );
