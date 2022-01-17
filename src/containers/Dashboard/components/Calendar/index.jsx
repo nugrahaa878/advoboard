@@ -11,11 +11,9 @@ import CustomCalendar from '../CustomCalendar';
 const Calendar = () => {
   const [isShowCalendar, setIsShowCalendar] = useState(false);
 
-  const showCalendar = () => {
+  const toggleCalendar = () => {
     setIsShowCalendar(!isShowCalendar);
   }
-
-  const calendar = isShowCalendar ? <CustomCalendar /> : null;
 
   return (
     <div className={styles.container}>
@@ -25,7 +23,7 @@ const Calendar = () => {
         <p className={styles.date}>11 September 2018 - 14 September 2018</p>
         <button
           className={styles.buttonArrow}
-          onClick={showCalendar}
+          onClick={toggleCalendar}
         >
           {!isShowCalendar && (
             <img

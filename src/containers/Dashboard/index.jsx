@@ -10,7 +10,6 @@ import TurnOverCard from './components/TurnOverCard';
 import SkuCard from './components/SkuCard';
 
 import { dummyBestSelling } from './data/item';
-import CustomCalendar from './components/CustomCalendar';
 
 const bestSellingSkuTitle = 'BEST SELLING SKU';
 const topCompetitorSkuTitle = 'TOP COMPETITOR SKU';
