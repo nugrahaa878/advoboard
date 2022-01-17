@@ -42,4 +42,5 @@
 .calendarContainer {
   background-color: white;
   padding: 20px;
+  animation-duration: 100ms;
 }

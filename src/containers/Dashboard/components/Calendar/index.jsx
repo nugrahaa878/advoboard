@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -9,14 +9,31 @@ import closeBlack from '../../../../assets/icons/close-black.png';
 import CustomCalendar from '../CustomCalendar';
 
 const Calendar = () => {
+  const calendarRef = useRef();
   const [isShowCalendar, setIsShowCalendar] = useState(false);
 
   const toggleCalendar = () => {
     setIsShowCalendar(!isShowCalendar);
   }
 
+  const handleClick = (e) => {
+    if (calendarRef.current.contains(e.target)) {
+      return;
+    }
+
+    setIsShowCalendar(false);
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    }
+  }, [])
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={calendarRef}>
       <div className={styles.infoContainer}>
         <img className={styles.calendarIcon} src={calendarIcon} alt='' />
         <p className={styles.title}>Period</p>
@@ -45,7 +62,9 @@ const Calendar = () => {
       </div>
       
       {isShowCalendar && (
-        <div className={styles.calendarContainer}>
+        <div 
+          className={styles.calendarContainer}
+        >
           <CustomCalendar />
         </div>
       )}
