@@ -6,7 +6,10 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import styles from './styles.module.css';
 
-const CustomCalendar = () => {
+const CustomCalendar = ({
+  changeStartDate,
+  changeEndDate,
+}) => {
   const [currentRangeType, setCurrentRangeType] = useState('');
   const [dateRange, setDateRange] = useState([{
     startDate: new Date(),
@@ -92,6 +95,8 @@ const CustomCalendar = () => {
 
   const handleRangeChange = () => {
     setCalendar(currentRangeType);
+    changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
+    changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
   };
 
   const listButtonRange = rangeButtonType.map((type, index) => {

@@ -10,6 +10,8 @@ import CustomCalendar from '../CustomCalendar';
 
 const Calendar = () => {
   const calendarRef = useRef();
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [isShowCalendar, setIsShowCalendar] = useState(false);
 
   const toggleCalendar = () => {
@@ -30,14 +32,24 @@ const Calendar = () => {
     return () => {
       document.removeEventListener('mousedown', handleClick);
     }
-  }, [])
+  }, []);
+
+  const handleChangeStartDate = (date) => {
+    setStartDate(date);
+  }
+
+  const handleChangeEndDate = (date) => {
+    setEndDate(date);
+  }
+
+  console.log(typeof(startDate));
 
   return (
     <div className={styles.container} ref={calendarRef}>
       <div className={styles.infoContainer}>
         <img className={styles.calendarIcon} src={calendarIcon} alt='' />
         <p className={styles.title}>Period</p>
-        <p className={styles.date}>11 September 2018 - 14 September 2018</p>
+        <p className={styles.date}>{endDate} - {startDate}</p>
         <button
           className={styles.buttonArrow}
           onClick={toggleCalendar}
@@ -65,7 +77,10 @@ const Calendar = () => {
         <div 
           className={styles.calendarContainer}
         >
-          <CustomCalendar />
+          <CustomCalendar 
+            changeStartDate={handleChangeStartDate}
+            changeEndDate={handleChangeEndDate}
+          />
         </div>
       )}
     </div>
