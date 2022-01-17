@@ -100,7 +100,7 @@ const CustomCalendar = ({
   useEffect(() => {
     changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
     changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
-  }, [dateRange])
+  }, [dateRange, changeEndDate, changeStartDate])
 
   const listButtonRange = rangeButtonType.map((type, index) => {
     return (
