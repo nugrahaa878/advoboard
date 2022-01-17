@@ -135,7 +135,6 @@ const CustomCalendar = () => {
         maxDate={addDays(new Date(), -1)}
         minDate={addDays(new Date(), -180)}
         showDateDisplay={false}
-        moveRangeOnFirstSelection={false}
         showMonthAndYearPickers={false}
         rangeColors={['#31A445', '#a43131', '#4631a4']}
       />
