@@ -15,3 +15,18 @@ export const dummyBestSelling = [
     sold: 12
   },
 ];
+
+export const yesterdayBestSelling = [
+  {
+    image: panadol,
+    name: 'Obat Sakit Kepala',
+    price: 1000,
+    sold: 12
+  },
+  {
+    image: indomie,
+    name: 'Indomie',
+    price: 3000,
+    sold: 90,
+  },
+];
