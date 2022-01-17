@@ -16,7 +16,7 @@ h2 {
   color: #B27A61;
 }
 
-ul {
+.listMenu {
   float: right;
   margin-right: 32px;
   margin-top: 16px;
@@ -25,12 +25,12 @@ ul {
   align-items: center;
 }
 
-ul li {
+.listMenu li {
   display: inline-block;
   margin-left: 16px;
 }
 
-ul li a {
+.listMenu li a {
   text-decoration: none;
   color: black;
 }

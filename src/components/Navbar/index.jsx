@@ -17,7 +17,7 @@ const Navbar = () => {
         <img className={styles.close} src={close} id={styles.close} alt='' />
       </label>
       <img className={styles.mainLogo} src={mainLogo} alt='' />
-      <ul>
+      <ul className={styles.listMenu}>
         <li className={styles.userInfo}>
           <p className={styles.username}>Username</p>
           <p className={styles.companyName}>Company Name</p>
