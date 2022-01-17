@@ -8,7 +8,9 @@ import Calendar from './components/Calendar';
 import InsightBar from './components/InsightBar';
 import TurnOverCard from './components/TurnOverCard';
 import SkuCard from './components/SkuCard';
+
 import { dummyBestSelling } from './data/item';
+import CustomCalendar from './components/CustomCalendar';
 
 const bestSellingSkuTitle = 'BEST SELLING SKU';
 const topCompetitorSkuTitle = 'TOP COMPETITOR SKU';
@@ -17,7 +19,7 @@ const Dashboard = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      
+
       <div className={styles.content}>
         <Sidebar />
         <div className={styles.salesContainer}>
@@ -32,15 +34,17 @@ const Dashboard = () => {
 
           <div className={styles.chart}>
             <p>APV</p>
-            <SkuCard 
+            <SkuCard
               title={bestSellingSkuTitle}
               products={dummyBestSelling}
             />
-            <SkuCard 
+            <SkuCard
               title={topCompetitorSkuTitle}
               products={dummyBestSelling}
             />
           </div>
+          
+          <CustomCalendar />
         </div>
       </div>
     </div>
