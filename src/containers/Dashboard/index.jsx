@@ -43,8 +43,6 @@ const Dashboard = () => {
               products={dummyBestSelling}
             />
           </div>
-          
-          <CustomCalendar />
         </div>
       </div>
     </div>
