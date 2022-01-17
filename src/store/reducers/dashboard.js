@@ -1,8 +1,7 @@
+import { dummyBestSelling } from "../../data/item";
+
 const initialState = {
-  isLoading: false,
-  listBook: {},
-  countries: {},
-  error: null
+  bestSelling: dummyBestSelling,
 }
 
 const dashboardReducer = (state = initialState, action) => {

@@ -1,5 +1,5 @@
-import indomie from '../../../assets/images/indomie.jpg';
-import panadol from '../../../assets/images/panadol.jpg';
+import indomie from '../assets/images/indomie.jpg';
+import panadol from '../assets/images/panadol.jpg';
 
 export const dummyBestSelling = [
   {

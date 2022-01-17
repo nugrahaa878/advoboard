@@ -9,7 +9,7 @@ import InsightBar from './components/InsightBar';
 import TurnOverCard from './components/TurnOverCard';
 import SkuCard from './components/SkuCard';
 
-import { dummyBestSelling } from './data/item';
+import { dummyBestSelling } from '../../data/item';
 import CustomChart from './components/CustomChart';
 
 const bestSellingSkuTitle = 'BEST SELLING SKU';
