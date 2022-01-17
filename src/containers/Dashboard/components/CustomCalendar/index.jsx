@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { addDays, endOfMonth, startOfMonth } from 'date-fns';
 import { DateRange } from 'react-date-range';
 
@@ -95,9 +95,12 @@ const CustomCalendar = ({
 
   const handleRangeChange = () => {
     setCalendar(currentRangeType);
+  };
+
+  useEffect(() => {
     changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
     changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
-  };
+  }, [dateRange])
 
   const listButtonRange = rangeButtonType.map((type, index) => {
     return (
