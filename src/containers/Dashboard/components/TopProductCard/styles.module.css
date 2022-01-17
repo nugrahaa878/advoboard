@@ -1,15 +1,15 @@
 .container {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
-  border: 0.5px solid #C5C5C59C;
   border-radius: 4px;
   opacity: 1;
   margin-bottom: 8px;
+  background-color: #FFE7BD;
 }
 
 .image {
   object-fit: contain;
-  width: 60px;
+  width: 80px;
 }
 
 .info {
@@ -24,12 +24,11 @@
 }
 
 .info h3 {
-  font-size: 16px;
+  font-size: 20px;
   color: #000000DE;
 }
 
 .info p {
   color: #00000099;
   opacity: 1;
-  font-size: 14px;
 }
