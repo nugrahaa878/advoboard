@@ -64,3 +64,29 @@
   color: red;
   font-weight: bold;
 }
+
+@media(max-width: 667px) {
+  .title {
+    font-size: 12px;
+  }
+
+  .dataContainer img {
+    width: 40px;
+  }
+
+  .dataContainer h3 {
+    font-size: 20px;
+  }
+
+  .statistic p {
+    font-size: 9px;
+  }
+
+  .statistic img {
+    width: 10px;
+  }
+
+  .moreIcon {
+    width: 10px;
+  }
+}
