@@ -10,4 +10,5 @@
   object-fit: cover;
   width: 24px;
   padding: 24px;
+  cursor: pointer;
 }
