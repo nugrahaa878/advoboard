@@ -4,13 +4,20 @@ import { DateRange } from 'react-date-range';
 
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+
 import styles from './styles.module.css';
+
+import { useDispatch } from 'react-redux';
+import { bestSelling30Days, bestSelling7Days, bestSellingCustom, bestSellingThisMonth, bestSellingYesterday } from '../../../../data/item';
+import { setDataSku } from '../../../../store/actions/dashboard';
 
 const CustomCalendar = ({
   changeStartDate,
   changeEndDate,
 }) => {
+  const dispatch = useDispatch();
   const [currentRangeType, setCurrentRangeType] = useState('');
+  const [bestSellingData, setBestSellingData] = useState([]);
   const [dateRange, setDateRange] = useState([{
     startDate: new Date(),
     endDate: new Date(),
@@ -63,6 +70,7 @@ const CustomCalendar = ({
           key: 'selection',
         },
       ]);
+      setBestSellingData(bestSellingYesterday);
     }
     if (type === 'sevendays') {
       setDateRange([
@@ -72,6 +80,7 @@ const CustomCalendar = ({
           key: 'selection',
         },
       ]);
+      setBestSellingData(bestSelling7Days);
     }
     if (type === 'thirtydays') {
       setDateRange([
@@ -81,6 +90,7 @@ const CustomCalendar = ({
           key: 'selection',
         },
       ]);
+      setBestSellingData(bestSelling30Days);
     }
     if (type === 'month') {
       setDateRange([
@@ -90,16 +100,23 @@ const CustomCalendar = ({
           key: 'selection',
         },
       ]);
+      setBestSellingData(bestSellingThisMonth);
     }
+    if (type === 'custom') {
+      setBestSellingData(bestSellingCustom);
+    }
+
   };
 
   const handleRangeChange = () => {
     setCalendar(currentRangeType);
+    console.log()
   };
 
   useEffect(() => {
-    changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
-    changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year:"numeric", month:"long", day:"numeric"}));
+    changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
+    changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
+    dispatch(setDataSku(bestSellingData));
   }, [dateRange, changeEndDate, changeStartDate])
 
   const listButtonRange = rangeButtonType.map((type, index) => {

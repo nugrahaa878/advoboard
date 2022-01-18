@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import styles from './styles.module.css';
 
@@ -16,6 +17,9 @@ const bestSellingSkuTitle = 'BEST SELLING SKU';
 const topCompetitorSkuTitle = 'TOP COMPETITOR SKU';
 
 const Dashboard = () => {
+  const data = useSelector((state) => state.dashboard.selectedData);
+
+  console.log(data);
   return (
     <div className={styles.container}>
       <Navbar />
@@ -36,7 +40,7 @@ const Dashboard = () => {
             <CustomChart />
             <SkuCard
               title={bestSellingSkuTitle}
-              products={dummyBestSelling}
+              products={data}
             />
             <SkuCard
               title={topCompetitorSkuTitle}

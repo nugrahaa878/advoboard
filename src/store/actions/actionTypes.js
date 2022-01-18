@@ -1,0 +1,1 @@
+export const SET_DATA_SKU = 'SET_DATA_SKU';
