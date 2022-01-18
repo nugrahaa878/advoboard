@@ -19,8 +19,14 @@ import closeBlack from '../../../../assets/icons/close-black.png';
 import { chartData1Month, chartData3Month, chartData6Month } from './data';
 
 const CustomChart = () => {
+  const [labelRange, setLabelRange] = useState('Last 6 Months');
   const [isShowListRange, setIsShowListRange] = useState(false);
   const [chartData, setChartData] = useState(chartData6Month);
+
+  const handleChangeRange = (data, label) => {
+    setChartData(data);
+    setLabelRange(label);
+  };
 
   return (
     <div className={styles.container}>
@@ -29,7 +35,7 @@ const CustomChart = () => {
         <div className={styles.header}>
           <div>
             <div className={styles.range}>
-              <button>Last 6 months</button>
+              <button>{labelRange}</button>
               {!isShowListRange && (
                 <img
                   className={styles.arrow}
@@ -49,9 +55,21 @@ const CustomChart = () => {
             </div>
             {isShowListRange && (
               <div className={styles.rangeMonth}>
-                <button onClick={() => setChartData(chartData6Month)}>6 months</button>
-                <button onClick={() => setChartData(chartData3Month)}>3 months</button>
-                <button onClick={() => setChartData(chartData1Month)}>1 months</button>
+                <button
+                  onClick={() => handleChangeRange(chartData6Month, 'Last 6 Months')}
+                >
+                  6 months
+                </button>
+                <button
+                  onClick={() => handleChangeRange(chartData3Month, 'Last 3 Months')}
+                >
+                  3 months
+                </button>
+                <button
+                  onClick={() => handleChangeRange(chartData1Month, 'Last Months')}
+                >
+                  1 months
+                </button>
               </div>
             )}
           </div>
