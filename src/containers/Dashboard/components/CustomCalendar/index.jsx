@@ -134,7 +134,7 @@ const CustomCalendar = ({
     dispatch(setDataSku(bestSellingData));
     dispatch(setDataCompetitor(bestCompetitorData));
 
-  }, [dateRange, changeEndDate, changeStartDate, dispatch, bestSellingData])
+  }, [dateRange, changeEndDate, changeStartDate, dispatch, bestSellingData, bestCompetitorData])
 
   const listButtonRange = rangeButtonType.map((type, index) => {
     return (
