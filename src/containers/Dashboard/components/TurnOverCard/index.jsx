@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 
 import sales from '../../../../assets/icons/sales.png';
 import more from '../../../../assets/icons/more.png';
+import arrowRed from '../../../../assets/icons/arrow-red.png';
 
 const TurnOverCard = () => {
   return (
@@ -13,7 +14,10 @@ const TurnOverCard = () => {
       <div className={styles.dataContainer}>
         <div>
           <h3>Rp 3,600,000</h3>
-          <p>13.8% last period in products sold</p>
+          <div className={styles.statistic}>
+            <img className={styles.arrowRed} src={arrowRed} alt='' />
+            <p><span>13.8%</span> last period in products sold</p>
+          </div>
         </div>
         <img className={styles.sales} src={sales} alt='' />
       </div>

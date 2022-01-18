@@ -48,3 +48,19 @@
   width: 48.54px;
   margin-left: 10px;
 }
+
+.statistic {
+  display: flex;
+  flex-direction: row;
+}
+
+.statistic img {
+  object-fit: contain;
+  width: 10px;
+  margin-right: 2px;
+}
+
+.statistic span {
+  color: red;
+  font-weight: bold;
+}
