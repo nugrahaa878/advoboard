@@ -44,3 +44,7 @@ Visualizes data in the respective form of visualization, has month filter and ev
 Show top best Selling SKU dan best competitor
 
 <img src="https://i.ibb.co/88JBYFs/sku.jpg" width="500">
+
+## Author
+
+- Ari Angga Nugraha
