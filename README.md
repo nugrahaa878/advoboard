@@ -24,4 +24,4 @@ npm start
 ## Feature
 
 ### Filter Period
-![](https://i.ibb.co/929XPbq/period.jpg)
+<img src="https://i.ibb.co/929XPbq/period.jpg" width="500">
