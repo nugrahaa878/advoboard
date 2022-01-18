@@ -27,8 +27,8 @@ const CustomCalendar = ({
 }) => {
   const dispatch = useDispatch();
   const [currentRangeType, setCurrentRangeType] = useState('');
-  const [bestSellingData, setBestSellingData] = useState([]);
-  const [bestCompetitorData, setBestCompetitorData] = useState([]);
+  const [bestSellingData, setBestSellingData] = useState(bestSellingYesterday);
+  const [bestCompetitorData, setBestCompetitorData] = useState(bestCompetitorYesterday);
   const [dateRange, setDateRange] = useState([{
     startDate: new Date(),
     endDate: new Date(),
@@ -72,6 +72,8 @@ const CustomCalendar = ({
           key: 'selection',
         },
       ]);
+      setBestSellingData(bestSellingYesterday);
+      setBestCompetitorData(bestCompetitorYesterday);
     }
     if (type === 'yesterday') {
       setDateRange([

@@ -68,7 +68,7 @@ const CustomChart = () => {
                 <button
                   onClick={() => handleChangeRange(chartData1Month, 'Last Months')}
                 >
-                  1 months
+                  Last months
                 </button>
               </div>
             )}
