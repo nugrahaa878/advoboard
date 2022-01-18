@@ -33,8 +33,8 @@ const CustomChart = () => {
 
   const handleChangeChartSize = () => {
     if (window.innerWidth <= 667) {
-      setChartWidth(150);
-      setChartHeight(200);
+      setChartWidth(240);
+      setChartHeight(350);
       setChartBarSize(15);
     } else {
       setChartWidth(500);
@@ -45,7 +45,7 @@ const CustomChart = () => {
 
   useEffect(() => {
     if (window.innerWidth <= 667) {
-      setChartWidth(250);
+      setChartWidth(240);
       setChartHeight(350);
       setChartBarSize(15);
     }
