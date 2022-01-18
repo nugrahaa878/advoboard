@@ -1,4 +1,11 @@
-import { bestSelling30Days, bestSelling7Days, bestSellingCustom, bestSellingThisMonth, bestSellingYesterday, dummyBestSelling } from "../../data/item";
+import { 
+  bestSelling30Days,
+  bestSelling7Days, 
+  bestSellingCustom, 
+  bestSellingThisMonth, 
+  bestSellingYesterday 
+} from "../../data/item";
+
 import { SET_DATA_SKU } from "../actions/actionTypes";
 import { updateObject } from "../utility";
 
