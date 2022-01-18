@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/74ae2fdb-9dee-42b3-86c9-e0f0198795c9/deploy-status)](https://app.netlify.com/sites/advoboard/deploys)
 
+Live website: https://advoboard.netlify.app/
+
 
 ## Description
 
