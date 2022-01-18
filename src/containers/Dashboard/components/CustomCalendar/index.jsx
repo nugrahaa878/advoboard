@@ -117,7 +117,7 @@ const CustomCalendar = ({
     changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
     changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
     dispatch(setDataSku(bestSellingData));
-  }, [dateRange, changeEndDate, changeStartDate])
+  }, [dateRange, changeEndDate, changeStartDate, dispatch, bestSellingData])
 
   const listButtonRange = rangeButtonType.map((type, index) => {
     return (
