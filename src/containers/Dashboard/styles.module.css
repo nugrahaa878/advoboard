@@ -48,5 +48,10 @@
 
   .chart {
     flex-direction: column;
+    overflow-x: scroll;
+  }
+
+  .header h1 {
+    font-size: 30px;
   }
 }

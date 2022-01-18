@@ -82,3 +82,22 @@ label img {
 .logoContainer {
   display: flex;
 }
+
+@media(max-width: 667px) {
+  .mainLogo {
+    object-fit: contain;
+    width: 150px;
+    margin-top: 0;
+  }
+
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .listMenu {
+    margin-top: 0;
+  }
+}

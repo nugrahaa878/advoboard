@@ -8,7 +8,7 @@ import mainLogo from '../../assets/images/advotics-logo-2.jpg';
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className={styles.navContainer}>
       <img className={styles.mainLogo} src={mainLogo} alt='' />
       <ul className={styles.listMenu}>
         <li className={styles.userInfo}>
