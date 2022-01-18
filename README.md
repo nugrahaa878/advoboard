@@ -20,3 +20,8 @@ npm install
 ```
 npm start
 ```
+
+## Feature
+
+### Filter Period
+![](https://i.ibb.co/929XPbq/period.jpg)
