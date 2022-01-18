@@ -121,7 +121,6 @@ const CustomCalendar = ({
       setBestSellingData(bestSellingCustom);
       setBestCompetitorData(bestCompetitorCustom);
     }
-
   };
 
   const handleRangeChange = () => {
@@ -133,7 +132,6 @@ const CustomCalendar = ({
     changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
     dispatch(setDataSku(bestSellingData));
     dispatch(setDataCompetitor(bestCompetitorData));
-
   }, [dateRange, changeEndDate, changeStartDate, dispatch, bestSellingData, bestCompetitorData])
 
   const listButtonRange = rangeButtonType.map((type, index) => {

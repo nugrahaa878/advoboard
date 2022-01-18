@@ -8,10 +8,12 @@ import closeBlack from '../../../../assets/icons/close-black.png';
 
 import CustomCalendar from '../CustomCalendar';
 
+const today = (new Date()).toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" });
+
 const Calendar = () => {
   const calendarRef = useRef();
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [startDate, setStartDate] = useState(today);
+  const [endDate, setEndDate] = useState(today);
   const [isShowCalendar, setIsShowCalendar] = useState(false);
 
   const toggleCalendar = () => {
