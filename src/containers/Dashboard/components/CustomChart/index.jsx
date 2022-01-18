@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Line,
   CartesianGrid,
@@ -19,6 +19,9 @@ import closeBlack from '../../../../assets/icons/close-black.png';
 import { chartData1Month, chartData3Month, chartData6Month } from './data';
 
 const CustomChart = () => {
+  const [chartWidth, setChartWidth] = useState(500);
+  const [chartHeight, setChartHeight] = useState(350);
+  const [chartBarSize, setChartBarSize] = useState(20);
   const [labelRange, setLabelRange] = useState('Last 6 Months');
   const [isShowListRange, setIsShowListRange] = useState(false);
   const [chartData, setChartData] = useState(chartData6Month);
@@ -27,6 +30,31 @@ const CustomChart = () => {
     setChartData(data);
     setLabelRange(label);
   };
+
+  const handleChangeChartSize = () => {
+    if (window.innerWidth <= 667) {
+      setChartWidth(150);
+      setChartHeight(200);
+      setChartBarSize(15);
+    } else {
+      setChartWidth(500);
+      setChartHeight(350);
+      setChartBarSize(20);
+    }
+  }
+
+  useEffect(() => {
+    if (window.innerWidth <= 667) {
+      setChartWidth(250);
+      setChartHeight(350);
+      setChartBarSize(15);
+    }
+    window.addEventListener('resize', handleChangeChartSize);
+
+    return () => {
+      document.removeEventListener('mousedown', handleChangeChartSize);
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -78,14 +106,14 @@ const CustomChart = () => {
       </div>
 
       <ComposedChart
-        width={500}
-        height={350}
+        width={chartWidth}
+        height={chartHeight}
         data={chartData}
         margin={{
           top: 20,
-          right: 20,
-          bottom: 20,
-          left: 20
+          right: 10,
+          bottom: 10,
+          left: 10
         }}
       >
         <CartesianGrid stroke="#f5f5f5" />
@@ -93,9 +121,9 @@ const CustomChart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="apv" stackId='a' barSize={20} fill="#37B04C" />
-        <Bar dataKey="nett" stackId='a' barSize={20} fill="#289E45" />
-        <Bar dataKey="upt" stackId='a' barSize={20} fill="#79d891" />
+        <Bar dataKey="apv" stackId='a' barSize={chartBarSize} fill="#37B04C" />
+        <Bar dataKey="nett" stackId='a' barSize={chartBarSize} fill="#289E45" />
+        <Bar dataKey="upt" stackId='a' barSize={chartBarSize} fill="#79d891" />
         <Line type="monotone" dataKey="gross" stroke="#FFE854" />
       </ComposedChart>
     </div>

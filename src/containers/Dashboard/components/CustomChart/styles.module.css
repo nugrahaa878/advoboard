@@ -63,3 +63,25 @@
   padding: 5px 10px;
   border-bottom: 1px solid #D7DAE2;
 }
+
+@media(max-width: 667px) {
+  .container {
+    padding: 10px 15px;
+  }
+
+  .titleContainer h3 {
+    font-size: 12px;
+  }
+
+  .range button {
+    font-size: 10px;
+  }
+
+  .rangeMonth button {
+    font-size: 10px;
+  }
+
+  .arrow {
+    width: 10px;
+  }
+}

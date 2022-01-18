@@ -22,3 +22,9 @@
   color: #4D4F5C;
   margin-bottom: 16px;
 }
+
+@media(max-width: 667px) {
+  .container {
+    margin-top: 20px;
+  }
+}
