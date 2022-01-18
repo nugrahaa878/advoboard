@@ -8,8 +8,18 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import styles from './styles.module.css';
 
 import { useDispatch } from 'react-redux';
-import { bestSelling30Days, bestSelling7Days, bestSellingCustom, bestSellingThisMonth, bestSellingYesterday } from '../../../../data/item';
-import { setDataSku } from '../../../../store/actions/dashboard';
+import {
+  bestSelling30Days,
+  bestSelling7Days,
+  bestSellingCustom,
+  bestSellingThisMonth,
+  bestSellingYesterday
+} from '../../../../data/bestSelling';
+import {
+  setDataSku,
+  setDataCompetitor,
+} from '../../../../store/actions/dashboard';
+import { bestCompetitor30Days, bestCompetitor7Days, bestCompetitorCustom, bestCompetitorThisMonth, bestCompetitorYesterday } from '../../../../data/competitor';
 
 const CustomCalendar = ({
   changeStartDate,
@@ -18,6 +28,7 @@ const CustomCalendar = ({
   const dispatch = useDispatch();
   const [currentRangeType, setCurrentRangeType] = useState('');
   const [bestSellingData, setBestSellingData] = useState([]);
+  const [bestCompetitorData, setBestCompetitorData] = useState([]);
   const [dateRange, setDateRange] = useState([{
     startDate: new Date(),
     endDate: new Date(),
@@ -71,6 +82,7 @@ const CustomCalendar = ({
         },
       ]);
       setBestSellingData(bestSellingYesterday);
+      setBestCompetitorData(bestCompetitorYesterday);
     }
     if (type === 'sevendays') {
       setDateRange([
@@ -81,6 +93,7 @@ const CustomCalendar = ({
         },
       ]);
       setBestSellingData(bestSelling7Days);
+      setBestCompetitorData(bestCompetitor7Days);
     }
     if (type === 'thirtydays') {
       setDateRange([
@@ -91,6 +104,7 @@ const CustomCalendar = ({
         },
       ]);
       setBestSellingData(bestSelling30Days);
+      setBestCompetitorData(bestCompetitor30Days);
     }
     if (type === 'month') {
       setDateRange([
@@ -101,22 +115,25 @@ const CustomCalendar = ({
         },
       ]);
       setBestSellingData(bestSellingThisMonth);
+      setBestCompetitorData(bestCompetitorThisMonth);
     }
     if (type === 'custom') {
       setBestSellingData(bestSellingCustom);
+      setBestCompetitorData(bestCompetitorCustom);
     }
 
   };
 
   const handleRangeChange = () => {
     setCalendar(currentRangeType);
-    console.log()
   };
 
   useEffect(() => {
     changeStartDate(dateRange[0].startDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
     changeEndDate(dateRange[0].endDate.toLocaleDateString('en-us', { year: "numeric", month: "long", day: "numeric" }));
     dispatch(setDataSku(bestSellingData));
+    dispatch(setDataCompetitor(bestCompetitorData));
+
   }, [dateRange, changeEndDate, changeStartDate, dispatch, bestSellingData])
 
   const listButtonRange = rangeButtonType.map((type, index) => {

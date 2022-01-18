@@ -23,7 +23,41 @@ import lux from '../assets/images/lux.jpg';
 import looloo from '../assets/images/looloo.jpg';
 import lifebouy from '../assets/images/lifebouy.jpg';
 
-export const bestSellingCustom = [
+export const bestCompetitorCustom = [
+  {
+    image: indomie,
+    name: 'Indomie',
+    price: 3000,
+    sold: 90,
+  },
+  {
+    image: sakura,
+    name: 'Mi Sakura',
+    price: 3000,
+    sold: 450,
+  },
+  {
+    image: chikiball,
+    name: 'Chiki Balls',
+    price: 1000,
+    sold: 130,
+  },
+  {
+    image: frisian,
+    name: 'Frisian Flag',
+    price: 2000,
+    sold: 65,
+  },
+  {
+    image: jetz,
+    name: 'Jetz',
+    price: 1000,
+    sold: 110,
+  },
+  
+];
+
+export const bestCompetitorThisMonth = [
   {
     image: indomie,
     name: 'Indomie',
@@ -31,16 +65,16 @@ export const bestSellingCustom = [
     sold: 800,
   },
   {
-    image: sedap,
-    name: 'Mie Sedap',
-    price: 3000,
-    sold: 700,
+    image: dettol,
+    name: 'Dettol',
+    price: 4000,
+    sold: 350,
   },
   {
-    image: sarimie,
-    name: 'Sarimie',
-    price: 3000,
-    sold: 650,
+    image: rejoice,
+    name: 'Rejoice',
+    price: 1500,
+    sold: 289,
   },
   {
     image: supermi,
@@ -49,14 +83,47 @@ export const bestSellingCustom = [
     sold: 650,
   },
   {
-    image: sakura,
-    name: 'Mi Sakura',
-    price: 3000,
-    sold: 450,
+    image: panadol,
+    name: 'Panadol',
+    price: 1000,
+    sold: 12
   },
 ];
 
-export const bestSellingThisMonth = [
+export const bestCompetitor30Days = [
+  {
+    image: leo,
+    name: 'Leo Kentang',
+    price: 1000,
+    sold: 200,
+  },
+  {
+    image: cheetos,
+    name: 'Cheetos',
+    price: 1500,
+    sold: 197,
+  },
+  {
+    image: lays,
+    name: 'Lays',
+    price: 2000,
+    sold: 160,
+  },
+  {
+    image: sasa,
+    name: 'Micin Sasa',
+    price: 500,
+    sold: 200,
+  },
+  {
+    image: popMie,
+    name: 'Pop Mie',
+    price: 4000,
+    sold: 190,
+  },
+];
+
+export const bestCompetitorYesterday = [
   {
     image: herborist,
     name: 'Herborist',
@@ -64,11 +131,12 @@ export const bestSellingThisMonth = [
     sold: 400,
   },
   {
-    image: dettol,
-    name: 'Dettol',
-    price: 4000,
-    sold: 350,
+    image: sedap,
+    name: 'Mie Sedap',
+    price: 3000,
+    sold: 700,
   },
+  
   {
     image: lux,
     name: 'Lux',
@@ -89,7 +157,7 @@ export const bestSellingThisMonth = [
   },
 ];
 
-export const bestSelling30Days = [
+export const bestCompetitor7Days = [
   {
     image: johnson,
     name: 'Johnson',
@@ -97,10 +165,10 @@ export const bestSelling30Days = [
     sold: 300,
   },
   {
-    image: rejoice,
-    name: 'Rejoice',
-    price: 1500,
-    sold: 289,
+    image: sarimie,
+    name: 'Sarimie',
+    price: 3000,
+    sold: 650,
   },
   {
     image: sunsilk,
@@ -119,86 +187,5 @@ export const bestSelling30Days = [
     name: 'Clear Men',
     price: 5000,
     sold: 170,
-  },
-];
-
-export const dummyBestSelling = [
-  {
-    image: indomie,
-    name: 'Indomie',
-    price: 3000,
-    sold: 90,
-  },
-  {
-    image: panadol,
-    name: 'Panadol',
-    price: 1000,
-    sold: 12
-  },
-];
-
-export const bestSellingYesterday = [
-  {
-    image: indomie,
-    name: 'Indomie',
-    price: 3000,
-    sold: 90,
-  },
-  {
-    image: panadol,
-    name: 'Panadol',
-    price: 1000,
-    sold: 12
-  },
-  {
-    image: frisian,
-    name: 'Frisian Flag',
-    price: 2000,
-    sold: 65,
-  },
-  {
-    image: popMie,
-    name: 'Pop Mie',
-    price: 4000,
-    sold: 190,
-  },
-  {
-    image: sasa,
-    name: 'Micin Sasa',
-    price: 500,
-    sold: 200,
-  },
-];
-
-export const bestSelling7Days = [
-  {
-    image: leo,
-    name: 'Leo Kentang',
-    price: 1000,
-    sold: 200,
-  },
-  {
-    image: cheetos,
-    name: 'Cheetos',
-    price: 1500,
-    sold: 197,
-  },
-  {
-    image: lays,
-    name: 'Lays',
-    price: 2000,
-    sold: 160,
-  },
-  {
-    image: chikiball,
-    name: 'Chiki Balls',
-    price: 1000,
-    sold: 130,
-  },
-  {
-    image: jetz,
-    name: 'Jetz',
-    price: 1000,
-    sold: 110,
-  },
+  },  
 ];

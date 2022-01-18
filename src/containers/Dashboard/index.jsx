@@ -10,16 +10,15 @@ import InsightBar from './components/InsightBar';
 import TurnOverCard from './components/TurnOverCard';
 import SkuCard from './components/SkuCard';
 
-import { dummyBestSelling } from '../../data/item';
 import CustomChart from './components/CustomChart';
 
 const bestSellingSkuTitle = 'BEST SELLING SKU';
 const topCompetitorSkuTitle = 'TOP COMPETITOR SKU';
 
 const Dashboard = () => {
-  const data = useSelector((state) => state.dashboard.selectedData);
+  const bestSelling = useSelector((state) => state.dashboard.bestSellingData);
+  const bestCompetitor = useSelector((state) => state.dashboard.competitorData);
 
-  console.log(data);
   return (
     <div className={styles.container}>
       <Navbar />
@@ -40,11 +39,11 @@ const Dashboard = () => {
             <CustomChart />
             <SkuCard
               title={bestSellingSkuTitle}
-              products={data}
+              products={bestSelling}
             />
             <SkuCard
               title={topCompetitorSkuTitle}
-              products={dummyBestSelling}
+              products={bestCompetitor}
             />
           </div>
         </div>

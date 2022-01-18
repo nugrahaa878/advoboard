@@ -1,1 +1,2 @@
 export const SET_DATA_SKU = 'SET_DATA_SKU';
+export const SET_DATA_COMPETITOR = 'SET_DATA_COMPETITOR';
