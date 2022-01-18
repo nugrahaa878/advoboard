@@ -11,14 +11,7 @@ import { updateObject } from "../utility";
 
 const initialState = {
   rangeType: 'yesterday',
-  bestSelling: {
-    yesterday: bestSellingYesterday,
-    seven: bestSelling7Days,
-    thirty: bestSelling30Days,
-    month: bestSellingThisMonth,
-    custom: bestSellingCustom,
-  },
-  selectedData: bestSellingYesterday
+  selectedData: bestSellingYesterday,
 }
 
 const dashboardReducer = (state = initialState, action) => {
