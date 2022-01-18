@@ -1,4 +1,4 @@
-export const chartData = [
+export const chartData6Month = [
   {
     day: "Mon",
     nett: 590,

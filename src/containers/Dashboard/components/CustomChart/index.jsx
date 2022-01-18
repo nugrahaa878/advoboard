@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Line,
   CartesianGrid,
@@ -14,17 +14,46 @@ import styles from './styles.module.css';
 
 import arrow from '../../../../assets/icons/arrow-down.png';
 import more from '../../../../assets/icons/more.png';
-import { chartData } from './data';
+import closeBlack from '../../../../assets/icons/close-black.png';
+
+import { chartData1Month, chartData3Month, chartData6Month } from './data';
 
 const CustomChart = () => {
+  const [isShowListRange, setIsShowListRange] = useState(false);
+  const [chartData, setChartData] = useState(chartData6Month);
+
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <h3>AVERAGE PURCHASE VALUE</h3>
         <div className={styles.header}>
-          <div className={styles.range}>
-            <button>Last 6 months</button>
-            <img className={styles.arrow} src={arrow} alt=''/>
+          <div>
+            <div className={styles.range}>
+              <button>Last 6 months</button>
+              {!isShowListRange && (
+                <img
+                  className={styles.arrow}
+                  src={arrow}
+                  alt=''
+                  onClick={() => setIsShowListRange(true)}
+                />
+              )}
+              {isShowListRange && (
+                <img
+                  className={styles.arrow}
+                  src={closeBlack}
+                  alt=''
+                  onClick={() => setIsShowListRange(false)}
+                />
+              )}
+            </div>
+            {isShowListRange && (
+              <div className={styles.rangeMonth}>
+                <button onClick={() => setChartData(chartData6Month)}>6 months</button>
+                <button onClick={() => setChartData(chartData3Month)}>3 months</button>
+                <button onClick={() => setChartData(chartData1Month)}>1 months</button>
+              </div>
+            )}
           </div>
           <img className={styles.more} src={more} alt='' />
         </div>

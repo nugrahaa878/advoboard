@@ -42,8 +42,6 @@ const Calendar = () => {
     setEndDate(date);
   }
 
-  console.log(typeof(startDate));
-
   return (
     <div className={styles.container} ref={calendarRef}>
       <div className={styles.infoContainer}>

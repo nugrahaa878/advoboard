@@ -12,6 +12,8 @@
 .arrow {
   object-fit: contain;
   width: 15px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .titleContainer {
@@ -45,4 +47,19 @@
 .more {
   object-fit: contain;
   height: 30px;
+}
+
+.rangeMonth {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #D7DAE2;
+  margin-right: 10px;
+}
+
+.rangeMonth button {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-bottom: 1px solid #D7DAE2;
 }
