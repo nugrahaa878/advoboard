@@ -40,3 +40,13 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media(max-width: 667px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .chart {
+    flex-direction: column;
+  }
+}

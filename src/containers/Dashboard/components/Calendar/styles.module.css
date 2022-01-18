@@ -44,3 +44,23 @@
   padding: 20px;
   animation-duration: 100ms;
 }
+
+@media(max-width: 667px) {
+  .infoContainer {
+    gap: 6px;
+    justify-content: flex-start;
+    padding: 8px 6px;
+    align-items: center;
+    width: fit-content;
+    margin-top: 15px;
+  }
+
+  .infoContainer p {
+    font-size: 11px;
+  }
+
+  .calendarIcon {
+    object-fit: contain;
+    width: 22px;
+  }
+}
